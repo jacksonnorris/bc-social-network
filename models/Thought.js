@@ -17,6 +17,7 @@ const thoughtSchema = new Schema({
   },
   reactions: [
     {
+      // activity 25 for its own file
       type: Schema.Types.ObjectId
     }
   ]
