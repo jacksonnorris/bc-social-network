@@ -8,7 +8,7 @@ const thoughtSchema = new Schema({
   },
   createdAt: {
     type: Date,
-    // add default
+    default: () => new Date(+new Date() + 7 * 24 * 60 * 60 * 1000)
     // getter method to format the timestamp on query
   },
   username: {
