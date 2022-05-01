@@ -1,4 +1,6 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./Reaction')
+const dateFormat = (date) => new Date(date).toLocaleString();
 
 const thoughtSchema = new Schema({
   thoughtText: {
@@ -8,8 +10,10 @@ const thoughtSchema = new Schema({
   },
   createdAt: {
     type: Date,
-    default: () => new Date(+new Date() + 7 * 24 * 60 * 60 * 1000)
+    // default: () => new Date(+new Date() + 7 * 24 * 60 * 60 * 1000)
     // getter method to format the timestamp on query
+    deafault: Date.now,
+    get: timestamp => dateFormat(timestamp)
   },
   username: {
     type: String,
@@ -18,7 +22,8 @@ const thoughtSchema = new Schema({
   reactions: [
     {
       // activity 25 for its own file
-      type: Schema.Types.ObjectId
+      // type: Schema.Types.ObjectId
+      reactions: [reactionSchema]
     }
   ]
 })

@@ -31,7 +31,7 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({ message: "No user found" })
-          : User.findOneAndUpdate(
+          : Thought.findOneAndUpdate(
             {
               users: req.params.id
             },
@@ -42,7 +42,7 @@ module.exports = {
               new: true
             },
 
-            res.json({ message: 'User deleted' })
+            // res.json({ message: 'User deleted' })
           )
             .then((thoughts) =>
               !thoughts
