@@ -3,34 +3,36 @@
 ## What it does
 
 ```
-
 This application uses MongoDb and Mongoose to allow users to create users, thoughts, friends, and reactions.
 The use can then use queries to retrieve data from the database.
 The application supports GET, PUT, POST, and DELETE requests
-
 ```
 
-## GET
+[Youtube Video showcasing how to use the application](https://youtu.be/rEFYF9uYyrw)
+
+## Requests
+
+### GET
 
 ```
 Can get all thoughts and users
 Can get thoughts by their id and users by their id
 
 ```
-## PUT
+### PUT
 
 ```
 Put requires an id and can update any information in thoughts and users
 
 ```
 
-## POST
+### POST
 
 ```
 Can add thoughts, users, friends, and reactions
 ```
 
-## DELETE
+### DELETE
 
 ```
 Delete requires an id to delete a thought or a user
@@ -38,10 +40,6 @@ Delete requires an id for both the user and the friend to delete
 Delete requires an id for both the thought and the reaction to delete
 
 ```
-
-
-
-
 
 ## Questions
 
